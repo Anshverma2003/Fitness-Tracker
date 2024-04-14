@@ -4,6 +4,7 @@ import Page2 from "./Component/Home/page2";
 import Goals from "./Component/Goals/goals";
 import Signup from "./Component/Signup/signup";
 import Login from "./Component/Login/login";
+import Schedule from "./Component/WorkoutSchedule/schedule";
 
 
 function App() {
@@ -28,8 +29,12 @@ function App() {
             <Signup/>
           </Route>
 
-          <Route>
+          <Route exact path='/login'>
             <Login/>
+          </Route>
+
+          <Route exact path='/schedule'>
+            <Schedule/>
           </Route>
 
         </Switch>
