@@ -5,7 +5,7 @@ const Page2 = () => {
     return (
         <div className="home">
             <div className="flex justify-end mb-4 ">
-                <a href="" className="text-[#9FB2FF] underline font-medium font-montserrat">Skip</a>
+                <a href="/sigup" className="text-[#9FB2FF] underline font-medium font-montserrat">Skip</a>
             </div>
             <div className='flex justify-center mb-16'>
                 <img src={pic1} alt="Image" className="w-96 h-60" />

@@ -40,8 +40,8 @@ const Signup = () => {
                     <img src={facebook} alt="" className='w-24' />
                 </button>
             </div>
-        
-            <p className='font-montserrat font-medium text-xs text-center text-[#2C2B2B]'>Already have an account? <button className='text-blue-400'>Login</button> </p>
+
+            <a href="/login"> <p className='font-montserrat font-medium text-xs text-center text-[#2C2B2B]'>Already have an account? <button className='text-blue-400'>Login</button> </p></a>
 
 
         </div>

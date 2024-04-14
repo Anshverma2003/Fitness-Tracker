@@ -3,6 +3,7 @@ import Home from "./Component/Home/home";
 import Page2 from "./Component/Home/page2";
 import Goals from "./Component/Goals/goals";
 import Signup from "./Component/Signup/signup";
+import Login from "./Component/Login/login";
 
 
 function App() {
@@ -25,6 +26,10 @@ function App() {
 
           <Route exact path='/signup'>
             <Signup/>
+          </Route>
+
+          <Route>
+            <Login/>
           </Route>
 
         </Switch>
