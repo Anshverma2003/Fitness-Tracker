@@ -5,6 +5,7 @@ import Goals from "./Component/Goals/goals";
 import Signup from "./Component/Signup/signup";
 import Login from "./Component/Login/login";
 import Schedule from "./Component/WorkoutSchedule/schedule";
+import WorkoutTracker from "./Component/WorkoutTracker/WorkoutTracker";
 
 
 function App() {
@@ -35,6 +36,10 @@ function App() {
 
           <Route exact path='/schedule'>
             <Schedule/>
+          </Route>
+
+          <Route exact path='/workout'>
+            <WorkoutTracker/>
           </Route>
 
         </Switch>

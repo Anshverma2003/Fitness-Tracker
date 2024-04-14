@@ -1,9 +1,14 @@
 import React, { useState } from 'react';
+import homeIcon from "../../Assets/homeIcon.png";
+import progressIcon from "../../Assets/progressIcon.png";
+import cameraIcon from "../../Assets/cameraIcon.png";
+import profileIcon from "../../Assets/profileIcon.png";
+import searchIcon from "../../Assets/searchIcon.png";
 
 const Schedule = () => {
     const daysOfWeek = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
     const currentDate = new Date();
-    const [date, setDate] = useState(currentDate.getDate());
+    var date = currentDate.getDate()
     const currentDay = currentDate.getDay();
     const currentMonth = currentDate.toLocaleString('default', { month: 'long' });
     const currentYear = currentDate.getFullYear();
@@ -17,8 +22,8 @@ const Schedule = () => {
             <div >
                 <div key={index} className={`flex items-center justify-center h-14 w-12 border border-gray-300 rounded-lg font-montserrat font-medium text-base ${index === currentDay ? 'bg-gradient-to-r from-[#ffff] to-[#96ABFF]' : ''} ${index > 0 ? 'ml-2' : ''}`}>
                     <div className='flex flex-col'>
-                        <p>{day}</p>
-                        
+                        <p className='font-montserrat font-medium text-base '>{day}</p>
+                        <p className='font-montserrat font-medium text-base flex justify-center '>{date = date + 1}</p>
                     </div>
                 </div>
             </div>
@@ -68,6 +73,45 @@ const Schedule = () => {
             <button className="absolute bottom-8 right-2 bg-blue-500 text-white font-montserrat text-3xl rounded-full w-16 h-16 flex items-center justify-center shadow-lg bg-gradient-to-r from-[#E9B1E0] to-[#D3A5F2]" onClick={handleAddWorkout}>
                 +
             </button>
+
+            <div className="bg-[#FFFFFF] sticky bottom-0 ">
+                <div className=" relative flex justify-evenly m-[13px] mt-[22.1px] ">
+                    <div className="flex justify-start gap-10 mr-[50px] mb-2">
+                        <img
+                            src={homeIcon}
+                            alt="home icon"
+                            className="w-[26.59px] h-[26.54px]"
+                        />
+                        <img
+                            src={progressIcon}
+                            alt="progress icon"
+                            className="w-[26.59px] h-[26.54px]"
+                        />
+                    </div>
+
+                    <div className="absolute bottom-[12px] ">
+                        <img
+                            src={searchIcon}
+                            alt="search icon"
+                            className="w-[63px] h-[63px]  rounded-[50%] shadow-lg"
+                        />
+                    </div>
+
+                    <div className="flex justify-start gap-8 ml-[50px]">
+                        <img
+                            src={cameraIcon}
+                            alt="camera icon"
+                            className="w-[26.59px] h-[26.54px]"
+                        />
+                        <img
+                            src={profileIcon}
+                            alt="profile icon"
+                            className="w-[26.59px] h-[26.54px]"
+                        />
+                    </div>
+                </div>
+            </div>
+
             {isModalOpen && (
                 <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
                     <div className="bg-white p-4 rounded-md flex flex-col space-y-6 w-80">

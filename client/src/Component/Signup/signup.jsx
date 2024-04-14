@@ -11,7 +11,7 @@ const Signup = () => {
 
             <div className="flex justify-center">
 
-                <form action="" className="flex flex-col justify-center items-center mx-auto gap-3">
+                <form className="flex flex-col justify-center items-center mx-auto gap-3">
                     {inputFields.map((input, idx) => (
                         <div key={idx} className="flex items-center justify-between" >
                             <input type="text" placeholder={input} className="bg-[#F1F1F1] mb-4 w-343 h-12 rounded-xl outline-blue-300 p-2 pl-4 text-[#7F7F7F] font-montserrat font-semibold text-xs" required />
