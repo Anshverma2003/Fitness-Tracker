@@ -1,6 +1,15 @@
+import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
+
 const Goals = () => {
 
     const goalDiv = ["Weight Loss", "Muscle Gain", "Flexibility and Mobility", "General Fitness", "Event - specific training", "Mindfulness and Mental Health"];
+
+    const navigate = useHistory();
+
+    function hanldeClick(e){
+        e.preventDefault();
+        navigate.push('/workout')
+    }
 
     return (
         <div className="goals flex-col space-y-12">
@@ -17,7 +26,7 @@ const Goals = () => {
                 </div>
             </div>
             <footer className="fixed left-0 right-0 flex justify-center">
-                <button className="bg-gradient-to-r from-blue-400 to-blue-600 text-white font-bold py-2 px-4 rounded w-343 h-12 font-montserrat text-base text-[#FFFFFF] font-semibold">Confirm</button>
+                <button className="bg-gradient-to-r from-blue-400 to-blue-600 text-white font-bold py-2 px-4 rounded w-343 h-12 font-montserrat text-base text-[#FFFFFF] font-semibold" onClick={hanldeClick}>Confirm</button>
             </footer>
         </div>
     );

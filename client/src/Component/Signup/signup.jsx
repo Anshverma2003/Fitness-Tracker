@@ -1,9 +1,19 @@
 import Google from '../../Assets/png-transparent-google-logo-google-text-trademark-logo-thumbnail.png'
 import facebook from '../../Assets/images.jpg'
+import { useHistory } from 'react-router-dom/cjs/react-router-dom.min';
 
 const Signup = () => {
 
     const inputFields = ["First Name", "Last Name", "Email", "Password"];
+    const navigate = useHistory();
+
+    
+    function handleSubmit(e){
+
+        e.preventDefault();
+        navigate.push('/goals')
+
+    }
 
     return (
         <div className="signup flex flex-col justify-center gap-12">
@@ -11,7 +21,7 @@ const Signup = () => {
 
             <div className="flex justify-center">
 
-                <form className="flex flex-col justify-center items-center mx-auto gap-3">
+                <form className="flex flex-col justify-center items-center mx-auto gap-3" onSubmit={handleSubmit}>
                     {inputFields.map((input, idx) => (
                         <div key={idx} className="flex items-center justify-between" >
                             <input type="text" placeholder={input} className="bg-[#F1F1F1] mb-4 w-343 h-12 rounded-xl outline-blue-300 p-2 pl-4 text-[#7F7F7F] font-montserrat font-semibold text-xs" required />

@@ -16,12 +16,11 @@ const Schedule = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [workoutName, setWorkoutName] = useState('');
     const [workoutTime, setWorkoutTime] = useState('');
-
     const renderDaysOfWeek = () => {
         return daysOfWeek.map((day, index) => (
             <div >
-                <div key={index} className={`flex items-center justify-center h-14 w-12 border border-gray-300 rounded-lg font-montserrat font-medium text-base ${index === currentDay ? 'bg-gradient-to-r from-[#ffff] to-[#96ABFF]' : ''} ${index > 0 ? 'ml-2' : ''}`}>
-                    <div className='flex flex-col'>
+                <div key={index} className={`flex items-center justify-center h-14 w-12 border border-gray-300 rounded-lg font-montserrat font-medium text-base ${index === currentDay ? 'bg-gradient-to-r from-[#ffff] to-[#96ABFF]' : ''}`}>
+                    <div className='flex flex-col' >
                         <p className='font-montserrat font-medium text-base '>{day}</p>
                         <p className='font-montserrat font-medium text-base flex justify-center '>{date = date + 1}</p>
                     </div>

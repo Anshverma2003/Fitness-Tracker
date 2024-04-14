@@ -36,11 +36,13 @@ const WorkoutTracker = () => {
           </div>
         </div>
         <div className="flex justify-center mt-[4.3px]">
-          <img
-            src={chartFull}
-            alt="chart"
-            className="w-[343px] h-[89.98px] min-w-[343px]"
-          />
+          <a href="/schedule">
+            <img
+              src={chartFull}
+              alt="chart"
+              className="w-[343px] h-[89.98px] min-w-[343px]"
+            />
+          </a>
         </div>
         <div className=" flex justify-center  w-[328.75px] h-[50px] mt-[24.85px] rounded-[10px] border-solid border-2 border-[#454545] border-opacity-[4%] custom-bg">
           <img
@@ -54,8 +56,6 @@ const WorkoutTracker = () => {
           </p>
         </div>
       </div>
-
-      {/* div for upcoming workout start from here*/}
 
       <div className="w-[343px] mt-[54.69px]">
         <div className="flex justify-between">

@@ -3,13 +3,22 @@ import facebook from '../../Assets/images.jpg'
 import showImage from '../../Assets/392505_eye_preview_see_seen_view_icon.png'
 import hideImage from '../../Assets/8666649_eye_off_icon.png'
 import { useState } from 'react'
+import { useHistory } from 'react-router-dom/cjs/react-router-dom.min'
+
 
 const Login = () => {
 
     const [showPassword, setShowPassword] = useState(false);
+    const navigate = useHistory();
+
 
     function handleClick(e) {
         setShowPassword(!showPassword);
+    }
+
+    function handleSubmit(e) {
+        e.preventDefault();
+        navigate.push('/goals')
     }
 
 
@@ -21,7 +30,7 @@ const Login = () => {
 
                 <div className="flex justify-center">
 
-                    <form action="" className="flex flex-col justify-center items-center mx-auto gap-3">
+                    <form action="" className="flex flex-col justify-center items-center mx-auto gap-3" onSubmit={handleSubmit}>
 
                         <div className="flex items-center justify-between" >
                             <input type="email" placeholder='Email' className="bg-[#F1F1F1] mb-4 w-343 h-12 rounded-xl outline-blue-300 p-2 pl-4 text-[#7F7F7F] font-montserrat font-semibold text-xs" required />
