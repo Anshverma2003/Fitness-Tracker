@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Home from "./Component/Home/home";
 import Page2 from "./Component/Home/page2";
 import Goals from "./Component/Goals/goals";
+import Signup from "./Component/Signup/signup";
 
 
 function App() {
@@ -20,6 +21,10 @@ function App() {
 
           <Route exact path='/goals'>
             <Goals/>
+          </Route>
+
+          <Route exact path='/signup'>
+            <Signup/>
           </Route>
 
         </Switch>
